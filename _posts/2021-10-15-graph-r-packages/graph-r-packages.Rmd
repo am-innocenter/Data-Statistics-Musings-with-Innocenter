@@ -1,0 +1,22 @@
+---
+title: "Graph packages in R"
+# listing: projects
+categories:
+  - Graphs
+  - R-packges
+draft: false
+author:
+  - name: am-innocenter
+date: 10-15-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+An analysis for   R-Packages built for graphs

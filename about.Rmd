@@ -1,0 +1,21 @@
+---
+title: "About"
+image: "IA.jpg"
+links: 
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/innocenter-moraa-amima/"
+  - label: Twitter
+    url: "https://twitter.com/am_innocenter"
+output:
+  postcards::trestles #jolla 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I am interested and curious about all things DATA! From designing surveys, collecting, pre-processing, analysing data and visualization. 
+
+Currently, I study at the University of Auckland. My day-to-day PhD research involve developing statistical models for dimension reduction and developing Bayesian networks  to understand the interconnections with complex ecological ecosystems. I enjoy working in a collaborative and socially diverse environment.
+
+

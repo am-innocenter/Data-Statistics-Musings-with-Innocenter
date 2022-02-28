@@ -1,0 +1,27 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About",
+      "author": [],
+      "contents": "\n\n          \n          \n          Data & Statistics Musings with Innocenter\n          \n          \n          Home\n          LeaRn with me\n          About\n          \n          \n          \n          ☰\n          \n          \n      \n        \n          \n            \n              \n            \n              About\n            \n            \n              \n                \n                    \n                      \n                        LinkedIn\n                      \n                    \n                  \n                                    \n                    \n                      \n                        Twitter\n                      \n                    \n                  \n                                  \n            \n          \n        \n        \n        \n          \n            I am interested and curious about all things DATA! From designing surveys, collecting, pre-processing, analysing data and visualization.\n            Currently, I study at the University of Auckland. My day-to-day PhD research involve developing statistical models for dimension reduction and developing Bayesian networks to understand the interconnections with complex ecological ecosystems. I enjoy working in a collaborative and socially diverse environment.\n          \n        \n      \n    \n\n    \n      \n        \n          \n            \n              \n            \n              About\n            \n            \n              \n                \n                                    \n                    \n                      LinkedIn\n                    \n                  \n                                    \n                    \n                      Twitter\n                    \n                  \n                                  \n              \n            \n            \n              I am interested and curious about all things DATA! From designing surveys, collecting, pre-processing, analysing data and visualization.\n              Currently, I study at the University of Auckland. My day-to-day PhD research involve developing statistical models for dimension reduction and developing Bayesian networks to understand the interconnections with complex ecological ecosystems. I enjoy working in a collaborative and socially diverse environment.\n            \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2022-02-28T17:10:35+13:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Posts",
+      "description": "Welcome to the website. I hope you leaRn R + have fun!\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-02-28T17:15:56+13:00"
+    },
+    {
+      "path": "leaRn.html",
+      "title": "LeaRn with me",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-02-28T17:10:37+13:00"
+    }
+  ],
+  "collections": ["posts/posts.json", "leaRn/leaRn.json"]
+}

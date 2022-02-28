@@ -1,0 +1,16 @@
+---
+title: "Posts"
+description: |
+  Welcome to the website. I hope you leaRn R + have fun!
+site: distill::distill_website
+listing: posts
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+```
+

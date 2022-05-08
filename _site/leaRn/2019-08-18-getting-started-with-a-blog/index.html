@@ -120,7 +120,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["getting-started-with-a-blog_files/anchor-4.2.2/anchor.min.js","getting-started-with-a-blog_files/bowser-1.9.3/bowser.min.js","getting-started-with-a-blog_files/distill-2.2.21/template.v2.js","getting-started-with-a-blog_files/header-attrs-2.14/header-attrs.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.min.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.min.map","getting-started-with-a-blog_files/popper-2.6.0/popper.min.js","getting-started-with-a-blog_files/tippy-6.2.7/tippy-bundle.umd.min.js","getting-started-with-a-blog_files/tippy-6.2.7/tippy-light-border.css","getting-started-with-a-blog_files/tippy-6.2.7/tippy.css","getting-started-with-a-blog_files/tippy-6.2.7/tippy.umd.min.js","getting-started-with-a-blog_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["blogdown1.png","blogdown2.png","getting-started-with-a-blog_files/anchor-4.2.2/anchor.min.js","getting-started-with-a-blog_files/bowser-1.9.3/bowser.min.js","getting-started-with-a-blog_files/distill-2.2.21/template.v2.js","getting-started-with-a-blog_files/header-attrs-2.14/header-attrs.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.min.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.min.map","getting-started-with-a-blog_files/popper-2.6.0/popper.min.js","getting-started-with-a-blog_files/tippy-6.2.7/tippy-bundle.umd.min.js","getting-started-with-a-blog_files/tippy-6.2.7/tippy-light-border.css","getting-started-with-a-blog_files/tippy-6.2.7/tippy.css","getting-started-with-a-blog_files/tippy-6.2.7/tippy.umd.min.js","getting-started-with-a-blog_files/webcomponents-2.0.0/webcomponents.js","netlify1.png","netlify2.png","netlify3.png","repo1.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2217,7 +2217,9 @@ href="https://bookdown.org/yihui/blogdown/themes.html">here</a>.</p>
 <p>After selecting the Hugo theme, using R studio open a new project and
 directory: using File → New Project → New Directory → Website using
 Blogdown</p>
-<p><img src="%22images/blogdown1.png%22" /></p>
+<p><img src="blogdown1.png" /></p>
+<h1
+id="r-knitrinclude_graphicsblogdown1.png"><code>{r} # knitr::include_graphics("blogdown1.png") #</code></h1>
 <p>You will be required to specify the directory name of the blog, the
 subdirectory where the blog is going to be place and the theme you
 selected in step 2 above. Complete the set up by clicking create
@@ -2226,7 +2228,7 @@ href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">here</a>.
 You can modify the config.toml file, create new posts…</p>
 <p>The website created can be built interactively by using
 <code>blogdown::serve_site()</code> or clicking Addins as shown</p>
-<p><img src="/images/blogdown2.png" /></p>
+<p><img src="blogdown2.png" /></p>
 <p>Now you can create a New Post by clicking <code>New Post</code> using
 the Addins or <code>new_post(title = 'xxx.md')</code> for markdown post
 or <code>new_post(title = 'xxxx.Rmd')</code> for R markdown files.</p>
@@ -2251,7 +2253,7 @@ site.</li>
 <p>Log into Github and create a new repository - do not add a readme.md
 yet. I prefer this way so that I do not have to make a
 <code>git pull</code> request.</p>
-<p><img src="/images/repo1.png" /></p>
+<p><img src="repo1.png" /></p>
 <p>Push the existing website located in your local directory to the
 repository using the command line as shown below - note to change the
 working directory to public/ before initializing the GIT repository
@@ -2289,12 +2291,12 @@ update.</p>
 <p>Another route will be to skip Github but everytime you will have to
 upload the public folder to Netlify.</p>
 <p>Log in to Netlify create a new site using Github</p>
-<p><img src="/images/netlify1.png" /></p>
+<p><img src="netlify1.png" /></p>
 <p>Select Github and follow the steps to deploy the website - netlify
 will turn to green if the deployment was a success.</p>
-<p><img src="/images/netlify2.png" /></p>
+<p><img src="netlify2.png" /></p>
 <p>You can edit the setting of your website name</p>
-<p><img src="/images/netlify3.png" /></p>
+<p><img src="netlify3.png" /></p>
 <p>Now you are ready to role - update Github by adding any new files and
 committing the changes. Now you have a domain name
 <code>website.netlify.com</code>- remember to edit the config.toml

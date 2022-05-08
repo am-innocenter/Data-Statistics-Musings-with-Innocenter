@@ -1,5 +1,6 @@
 ---
 title: "LeaRn with me"
+description: Learn packages and tools in R
 listing: leaRn
 ---
   

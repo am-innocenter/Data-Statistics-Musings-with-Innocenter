@@ -1,6 +1,6 @@
-name: "am-innocenter" #Innocenter.rbind/netlify page
-title: "Data & Statistics Musings with Innocenter"
-# base_url: #rbind one
+name: "Data-Statistics-Musings" #Innocenter.rbind/netlify page
+title: "Data & Statistics Musings"
+base_url: innocenter-amima.rbind.io/
 # repository_url: #github
 #source_url: 
 collections:
@@ -8,24 +8,27 @@ collections:
     categories: true
     categories_metadata: true
     authors_metadata: false #names of authors on teh left-side
-    feed_items_max: 50
-    # disqus: another-data-enthusiast.netlify.com
-    # share: [twitter, linkedin]
+    feed_items_max: 30
+    disqus:
+      shortname: innocenter #another-data-enthusiast.netlify.com
+      hidden: true
+    share: [twitter, linkedin]
  
-  projects:
+
+# collections:
+  LeaRn:
     categories: true
     categories_metadata: true
     authors_metadata: false #names of authors on teh left-side
-    feed_items_max: 50
-    # disqus: another-data-enthusiast.netlify.com
-    # share: [twitter, linkedin]
+    feed_items_max: 30
+    disqus: 
+     shortname: innocenter #another-data-enthusiast.netlify.com
+    share: [twitter, linkedin]
     
        
 rss:
   full_content: true
-  categories:
-    - portfolios
-    - forecasting
+
     
 output_dir: "_site"
 navbar:

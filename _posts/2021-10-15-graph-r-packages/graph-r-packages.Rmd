@@ -1,13 +1,14 @@
 ---
-title: "Graph packages in R"
+title: "Probabilistic Graphical Modelling with bnlearn package"
 # listing: projects
 categories:
-  - Graphs
-  - R-packges
+  - DAGs
+  - Bayesian networks
+  - R-packages
 draft: false
-author:
-  - name: am-innocenter
-date: 10-15-2021
+# author:
+#   - name: am-innocenter
+date: "`r Sys.Date()`"
 output:
   distill::distill_article:
     self_contained: false
@@ -20,3 +21,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 An analysis for   R-Packages built for graphs
+
+DAGs are 
+
+```{r, layout="l-body-outset", preview=TRUE}
+#Specify which images to use to preview
+library(ggplot2)
+ggplot(diamonds, aes(carat, price)) + geom_smooth() +
+  facet_grid(~ cut)
+```

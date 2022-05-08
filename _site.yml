@@ -1,7 +1,7 @@
 name: "Data-Statistics-Musings" #Innocenter.rbind/netlify page
 title: "Data & Statistics Musings"
-base_url: innocenter-amima.rbind.io/
-# repository_url: #github
+base_url: innocenter-amima.rbind.io
+# repository_url: https://github.com/am-innocenter/Data-Statistics-Musings-with-Innocenter.git
 #source_url: 
 collections:
   posts:
@@ -13,7 +13,7 @@ collections:
       shortname: innocenter #another-data-enthusiast.netlify.com
       hidden: true
     share: [twitter, linkedin]
- 
+    citations: false
 
 # collections:
   LeaRn:
@@ -24,6 +24,7 @@ collections:
     disqus: 
      shortname: innocenter #another-data-enthusiast.netlify.com
     share: [twitter, linkedin]
+    citations: false
     
        
 rss:

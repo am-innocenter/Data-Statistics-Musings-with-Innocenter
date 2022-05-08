@@ -35,7 +35,24 @@
     ],
     "contents": "\nLatent Variable Modelling R-packages\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-05-08T13:17:17+12:00",
+    "last_modified": "2022-05-08T13:23:55+12:00",
     "input_file": "latent-variable-modelling-r-packages.knit.md"
+  },
+  {
+    "path": "posts/2019-11-26-understanding-us-student-loan-debt/",
+    "title": "Understanding US Student Loan Debt",
+    "description": "Perform data visualization and determine the most preferred method of payment for student loans in the US.",
+    "author": [],
+    "date": "2019-11-26",
+    "categories": [
+      "TidyTuesday",
+      "Data viz"
+    ],
+    "contents": "\nThis week the data was inspired from the Dignity\n& Debt project. This will help in understanding and spreading\nawareness around Student Loan debt. The data source is here\nThe objective for this is to perform data visualization and determine\nthe most preferred method of payment for student loans in the US. I will\nuse patchwork package to combine plots.\nLoading the data\n\nRows: 291\nColumns: 10\n$ agency_name        <chr> \"Account Control Technology, Inc.\", \"Alli…\n$ year               <int> 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 1…\n$ quarter            <int> 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…\n$ starting           <dbl> 5807704381, 3693337631, 2364391549, 70421…\n$ added              <dbl> 1040570567, NA, NA, NA, NA, NA, 104094670…\n$ total              <dbl> 122602642, 113326847, 83853003, 99643903,…\n$ consolidation      <dbl> 20081894, 11533809, 7377703, 3401361, 894…\n$ rehabilitation     <dbl> 90952573, 86967994, 64227391, 85960328, 5…\n$ voluntary_payments <dbl> 5485506.9, 4885225.1, 3939866.1, 2508999.…\n$ wage_garnishments  <dbl> 6082668, 9939819, 8308043, 7773214, 54738…\n\nOriginal data file can be accessed through the weekly TidyTuesday\nGithub reporsitory in this link\nand data source is here\nRenaming columns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nagency_name\n\n\nTotal.starting\n\n\nTotal.added\n\n\nTotal.repaid\n\n\nConServe\n\n\n109.05668\n\n\n8.255166\n\n\n3.3928101\n\n\nAccount Control Technology, Inc. \n\n\n91.20824\n\n\n8.254341\n\n\n2.8479518\n\n\nFMS Investment Corp\n\n\n73.20214\n\n\n8.254231\n\n\n2.1526409\n\n\nGC Services LP\n\n\n70.19962\n\n\n8.254341\n\n\n1.8947032\n\n\nWindham Professionals, Inc. \n\n\n65.77404\n\n\n8.254018\n\n\n2.0332805\n\n\nImmediate Credit Recovery, Inc. \n\n\n50.69030\n\n\n9.148463\n\n\n1.1516027\n\n\nImmediate Credit Recovery\n\n\n40.24292\n\n\n3.300990\n\n\n0.8600955\n\n\nFMS\n\n\n37.40026\n\n\n0.000000\n\n\n0.9890860\n\n\nCoast Professional, Inc. \n\n\n36.48558\n\n\n9.477421\n\n\n1.1540227\n\n\nGC Services\n\n\n35.37406\n\n\n0.000000\n\n\n0.9639185\n\n\nCoast Professional Inc\n\n\n35.36888\n\n\n7.604481\n\n\n0.9776974\n\n\nNational Recoveries Inc\n\n\n34.37731\n\n\n7.211969\n\n\n0.6891628\n\n\nAction Financial Services\n\n\n33.65348\n\n\n6.487008\n\n\n0.7403217\n\n\nNational Recoveries, Inc. \n\n\n31.86218\n\n\n8.850182\n\n\n0.7083161\n\n\n\n\n\n",
+    "preview": "posts/2019-11-26-understanding-us-student-loan-debt/understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-7-1.png",
+    "last_modified": "2022-05-08T14:18:48+12:00",
+    "input_file": "understanding-us-student-loan-debt.knit.md",
+    "preview_width": 1248,
+    "preview_height": 768
   }
 ]

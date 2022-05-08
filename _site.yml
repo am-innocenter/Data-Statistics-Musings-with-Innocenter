@@ -35,10 +35,10 @@ output_dir: "_site"
 navbar:
   search: true
   right:
-    - text: "Home"
+    - text: "Blog"
       href: index.html
-    - text: "LeaRn with me"
-      href: leaRn.html
+    # - text: "LeaRn with me"
+    #   href: leaRn.html
     - text: "About"
       href: about.html
     - icon: fa fa-rss

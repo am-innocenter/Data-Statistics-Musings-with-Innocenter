@@ -87,46 +87,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-<title>Data &amp; Statistics Musings: Understanding US Student Loan Debt</title>
+<title>Data &amp; Statistics Musings: Error Knitting: R markdown not knitting</title>
 
-<meta property="description" itemprop="description" content="Perform data visualization and determine the most preferred method of payment for student loans in the US."/>
+<meta property="description" itemprop="description" content="Setting up .Rprofile"/>
 
-<link rel="canonical" href="innocenter-amima.rbind.io/posts/2019-11-26-understanding-us-student-loan-debt/"/>
+<link rel="canonical" href="innocenter-amima.rbind.io/posts/2019-08-18-errorknitting/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-11-26"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-11-26"/>
+<meta property="article:published" itemprop="datePublished" content="2019-08-18"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-08-18"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Data &amp; Statistics Musings: Understanding US Student Loan Debt"/>
+<meta property="og:title" content="Data &amp; Statistics Musings: Error Knitting: R markdown not knitting"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Perform data visualization and determine the most preferred method of payment for student loans in the US."/>
-<meta property="og:url" content="innocenter-amima.rbind.io/posts/2019-11-26-understanding-us-student-loan-debt/"/>
-<meta property="og:image" content="innocenter-amima.rbind.io/posts/2019-11-26-understanding-us-student-loan-debt/understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-7-1.png"/>
-<meta property="og:image:width" content="1248"/>
-<meta property="og:image:height" content="768"/>
+<meta property="og:description" content="Setting up .Rprofile"/>
+<meta property="og:url" content="innocenter-amima.rbind.io/posts/2019-08-18-errorknitting/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Data &amp; Statistics Musings"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Data &amp; Statistics Musings: Understanding US Student Loan Debt"/>
-<meta property="twitter:description" content="Perform data visualization and determine the most preferred method of payment for student loans in the US."/>
-<meta property="twitter:url" content="innocenter-amima.rbind.io/posts/2019-11-26-understanding-us-student-loan-debt/"/>
-<meta property="twitter:image" content="innocenter-amima.rbind.io/posts/2019-11-26-understanding-us-student-loan-debt/understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-7-1.png"/>
-<meta property="twitter:image:width" content="1248"/>
-<meta property="twitter:image:height" content="768"/>
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Data &amp; Statistics Musings: Error Knitting: R markdown not knitting"/>
+<meta property="twitter:description" content="Setting up .Rprofile"/>
+<meta property="twitter:url" content="innocenter-amima.rbind.io/posts/2019-08-18-errorknitting/"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","date","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Understanding US Student Loan Debt"]},{"type":"character","attributes":{},"value":["Perform data visualization and determine the most preferred method of payment for student loans in the US."]},{"type":"character","attributes":{},"value":["TidyTuesday","Data viz"]},{"type":"character","attributes":{},"value":["2019-11-26"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["innocenter-amima.rbind.io/posts/2019-11-26-understanding-us-student-loan-debt/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","description","date","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Error Knitting: R markdown not knitting"]},{"type":"character","attributes":{},"value":["Errors","R setup"]},{"type":"character","attributes":{},"value":["Setting up .Rprofile"]},{"type":"character","attributes":{},"value":["2019-08-18"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["innocenter-amima.rbind.io/posts/2019-08-18-errorknitting/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["understanding-us-student-loan-debt_files/anchor-4.2.2/anchor.min.js","understanding-us-student-loan-debt_files/bowser-1.9.3/bowser.min.js","understanding-us-student-loan-debt_files/distill-2.2.21/template.v2.js","understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-10-1.png","understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-11-1.png","understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-6-1.png","understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-7-1.png","understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-8-1.png","understanding-us-student-loan-debt_files/header-attrs-2.14/header-attrs.js","understanding-us-student-loan-debt_files/jquery-3.6.0/jquery-3.6.0.js","understanding-us-student-loan-debt_files/jquery-3.6.0/jquery-3.6.0.min.js","understanding-us-student-loan-debt_files/jquery-3.6.0/jquery-3.6.0.min.map","understanding-us-student-loan-debt_files/kePrint-0.0.1/kePrint.js","understanding-us-student-loan-debt_files/lightable-0.0.1/lightable.css","understanding-us-student-loan-debt_files/popper-2.6.0/popper.min.js","understanding-us-student-loan-debt_files/tippy-6.2.7/tippy-bundle.umd.min.js","understanding-us-student-loan-debt_files/tippy-6.2.7/tippy-light-border.css","understanding-us-student-loan-debt_files/tippy-6.2.7/tippy.css","understanding-us-student-loan-debt_files/tippy-6.2.7/tippy.umd.min.js","understanding-us-student-loan-debt_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["errorknitting_files/anchor-4.2.2/anchor.min.js","errorknitting_files/bowser-1.9.3/bowser.min.js","errorknitting_files/distill-2.2.21/template.v2.js","errorknitting_files/header-attrs-2.14/header-attrs.js","errorknitting_files/jquery-3.6.0/jquery-3.6.0.js","errorknitting_files/jquery-3.6.0/jquery-3.6.0.min.js","errorknitting_files/jquery-3.6.0/jquery-3.6.0.min.map","errorknitting_files/popper-2.6.0/popper.min.js","errorknitting_files/tippy-6.2.7/tippy-bundle.umd.min.js","errorknitting_files/tippy-6.2.7/tippy-light-border.css","errorknitting_files/tippy-6.2.7/tippy.css","errorknitting_files/tippy-6.2.7/tippy.umd.min.js","errorknitting_files/webcomponents-2.0.0/webcomponents.js","markdown_error.png","markdown_error2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2054,8 +2048,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!--/radix_placeholder_distill-->
   <script src="../../site_libs/header-attrs-2.14/header-attrs.js"></script>
-  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2147,7 +2139,7 @@ li::marker {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Understanding US Student Loan Debt","description":"Perform data visualization and determine the most preferred method of payment for student loans in the US.","authors":[],"publishedDate":"2019-11-26T00:00:00.000+13:00"}
+{"title":"Error Knitting: R markdown not knitting","description":"Setting up .Rprofile","authors":[],"publishedDate":"2019-08-18T00:00:00.000+12:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2176,301 +2168,67 @@ li::marker {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Understanding US Student Loan Debt</h1>
+<h1>Error Knitting: R markdown not knitting</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-  <a href="../../index.html#category:TidyTuesday" class="dt-tag">TidyTuesday</a>
-  <a href="../../index.html#category:Data_viz" class="dt-tag">Data viz</a>
+  <a href="../../index.html#category:Errors" class="dt-tag">Errors</a>
+  <a href="../../index.html#category:R_setup" class="dt-tag">R setup</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>Perform data visualization and determine the most preferred method
-of payment for student loans in the US.</p></p>
+<p><p>Setting up .Rprofile</p></p>
 </div>
 
 
 <div class="d-article">
-<p>This week the data was inspired from the <a
-href="https://www.dignityanddebt.org/projects/student-debt-racial-disparities/">Dignity
-&amp; Debt</a> project. This will help in understanding and spreading
-awareness around Student Loan debt. The data source is <a
-href="https://studentaid.gov/data-center/student/default">here</a></p>
-<p>The objective for this is to perform data visualization and determine
-the most preferred method of payment for student loans in the US. I will
-use <code>patchwork</code> package to combine plots.</p>
-<p>Loading the data</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre><code>Rows: 291
-Columns: 10
-$ agency_name        &lt;chr&gt; &quot;Account Control Technology, Inc.&quot;, &quot;Alli…
-$ year               &lt;int&gt; 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 1…
-$ quarter            &lt;int&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
-$ starting           &lt;dbl&gt; 5807704381, 3693337631, 2364391549, 70421…
-$ added              &lt;dbl&gt; 1040570567, NA, NA, NA, NA, NA, 104094670…
-$ total              &lt;dbl&gt; 122602642, 113326847, 83853003, 99643903,…
-$ consolidation      &lt;dbl&gt; 20081894, 11533809, 7377703, 3401361, 894…
-$ rehabilitation     &lt;dbl&gt; 90952573, 86967994, 64227391, 85960328, 5…
-$ voluntary_payments &lt;dbl&gt; 5485506.9, 4885225.1, 3939866.1, 2508999.…
-$ wage_garnishments  &lt;dbl&gt; 6082668, 9939819, 8308043, 7773214, 54738…</code></pre>
-</div>
-<p>Original data file can be accessed through the weekly TidyTuesday
-Github reporsitory in this <a
-href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-11-26/loans.csv">link</a>
-and data source is <a
-href="https://studentaid.ed.gov/sa/about/data-center/student/default">here</a></p>
-<p>Renaming columns</p>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<div class="layout-chunk" data-layout="l-body-outset">
-
-</div>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="understanding-us-student-loan-debt_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<table class="table" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-agency_name
-</th>
-<th style="text-align:right;">
-Total.starting
-</th>
-<th style="text-align:right;">
-Total.added
-</th>
-<th style="text-align:right;">
-Total.repaid
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-ConServe
-</td>
-<td style="text-align:right;">
-109.05668
-</td>
-<td style="text-align:right;">
-8.255166
-</td>
-<td style="text-align:right;">
-3.3928101
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Account Control Technology, Inc. 
-</td>
-<td style="text-align:right;">
-91.20824
-</td>
-<td style="text-align:right;">
-8.254341
-</td>
-<td style="text-align:right;">
-2.8479518
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-FMS Investment Corp
-</td>
-<td style="text-align:right;">
-73.20214
-</td>
-<td style="text-align:right;">
-8.254231
-</td>
-<td style="text-align:right;">
-2.1526409
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-GC Services LP
-</td>
-<td style="text-align:right;">
-70.19962
-</td>
-<td style="text-align:right;">
-8.254341
-</td>
-<td style="text-align:right;">
-1.8947032
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Windham Professionals, Inc. 
-</td>
-<td style="text-align:right;">
-65.77404
-</td>
-<td style="text-align:right;">
-8.254018
-</td>
-<td style="text-align:right;">
-2.0332805
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Immediate Credit Recovery, Inc. 
-</td>
-<td style="text-align:right;">
-50.69030
-</td>
-<td style="text-align:right;">
-9.148463
-</td>
-<td style="text-align:right;">
-1.1516027
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Immediate Credit Recovery
-</td>
-<td style="text-align:right;">
-40.24292
-</td>
-<td style="text-align:right;">
-3.300990
-</td>
-<td style="text-align:right;">
-0.8600955
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-FMS
-</td>
-<td style="text-align:right;">
-37.40026
-</td>
-<td style="text-align:right;">
-0.000000
-</td>
-<td style="text-align:right;">
-0.9890860
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Coast Professional, Inc. 
-</td>
-<td style="text-align:right;">
-36.48558
-</td>
-<td style="text-align:right;">
-9.477421
-</td>
-<td style="text-align:right;">
-1.1540227
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-GC Services
-</td>
-<td style="text-align:right;">
-35.37406
-</td>
-<td style="text-align:right;">
-0.000000
-</td>
-<td style="text-align:right;">
-0.9639185
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Coast Professional Inc
-</td>
-<td style="text-align:right;">
-35.36888
-</td>
-<td style="text-align:right;">
-7.604481
-</td>
-<td style="text-align:right;">
-0.9776974
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-National Recoveries Inc
-</td>
-<td style="text-align:right;">
-34.37731
-</td>
-<td style="text-align:right;">
-7.211969
-</td>
-<td style="text-align:right;">
-0.6891628
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Action Financial Services
-</td>
-<td style="text-align:right;">
-33.65348
-</td>
-<td style="text-align:right;">
-6.487008
-</td>
-<td style="text-align:right;">
-0.7403217
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-National Recoveries, Inc. 
-</td>
-<td style="text-align:right;">
-31.86218
-</td>
-<td style="text-align:right;">
-8.850182
-</td>
-<td style="text-align:right;">
-0.7083161
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sourceCode" id="cb2"><pre
+<p>I was getting errors knitting .Rmarkdown or .Rmd files and the
+culprint was that I had multiple .Rprofiles in my Home and project
+directories. The error is as shown below</p>
+<p><img src="markdown_error.png" /></p>
+<p>Everytime I restarted the machine it was loading the previous
+workspace with the following error.</p>
+<p><img src="markdown_error2.png" /></p>
+<p>At first I thought .RData was the culprint and I unliked it using
+unlink(“~/.RData”). It still did not solve the problem.</p>
+<p>I had updated to the latest Rversion and my first instinct was update
+libraries, uninstall and reinstall R+Rstudio but still the error was
+there anytime I tried knitting. I tried most suggestions provided such
+as including self_contained: no and even installed tinytex :
+tinytex::install_tinytex().</p>
+<h2 id="solution">Solution</h2>
+<blockquote>
+<p>The following solution was provided by Yihue Xie.</p>
+</blockquote>
+<p>First, I had to uncheck the Restore workspace in the Global settings
+as show below and checked if the project directory had any .Rprofile and
+set it according to this <a
+href="https://bookdown.org/yihui/blogdown/global-options.html">link</a>.</p>
+<p>The following are some great resources that helped me</p>
+<ol type="1">
+<li><a
+href="https://csgillespie.github.io/efficientR/3-3-r-startup.html">R
+setup</a></li>
+<li><a href="https://whattheyforgot.org/r-startup.html#rprofile">Startup
+- Rprofile</a></li>
+</ol>
+<p>Finally, I can run my files without any hustle. Thanks to the support
+of Yihue Xhie and Christopher Dervieux. They helped me figure out where
+the problem was.</p>
+<blockquote>
+<p>If you’d like to refer to the conversation, I lodged an issue to the
+Rstudio community and Github <a
+href="https://github.com/rstudio/rmarkdown/issues/1621">here</a>.</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://twitter.com/share?text=Understanding%20US%20Student%20Loan%20Debt&amp;url=innocenter-amima.rbind.io%2Fposts%2F2019-11-26-understanding-us-student-loan-debt%2F">
+      <a href="https://twitter.com/share?text=Error%20Knitting%3A%20R%20markdown%20not%20knitting&amp;url=innocenter-amima.rbind.io%2Fposts%2F2019-08-18-errorknitting%2F">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=innocenter-amima.rbind.io%2Fposts%2F2019-11-26-understanding-us-student-loan-debt%2F&amp;title=Understanding%20US%20Student%20Loan%20Debt">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=innocenter-amima.rbind.io%2Fposts%2F2019-08-18-errorknitting%2F&amp;title=Error%20Knitting%3A%20R%20markdown%20not%20knitting">
         <i class="fab fa-linkedin"></i>
       </a>
     </span>

@@ -1,8 +1,7 @@
 ---
 title: "Error Knitting: R markdown not knitting"
 categories:
-  - Errors
-  - R setup
+  - R Errors
 description: |
   Setting up .Rprofile
 date: 2019-08-18

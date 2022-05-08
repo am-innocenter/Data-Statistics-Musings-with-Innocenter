@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2021-10-15-graph-r-packages/",
-    "title": "Graph packages in R",
+    "title": "Probabilistic Graphical Modelling with bnlearn package",
     "description": {},
     "author": [
       {
@@ -9,14 +9,17 @@
         "url": {}
       }
     ],
-    "date": "2021-10-15",
+    "date": "2022-05-07",
     "categories": [
-      "Graphs",
-      "R-packges"
+      "DAGs",
+      "Bayesian networks",
+      "R-packages"
     ],
-    "contents": "\nAn analysis for R-Packages built for graphs\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-02-28T18:28:03+13:00",
-    "input_file": {}
+    "contents": "\nAn analysis for R-Packages built for graphs\nDAGs are\n\n\n\n\n\n\n",
+    "preview": "posts/2021-10-15-graph-r-packages/graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2022-05-07T17:17:49+12:00",
+    "input_file": {},
+    "preview_width": 1248,
+    "preview_height": 768
   }
 ]

@@ -87,35 +87,50 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-<title>Data &amp; Statistics Musings with Innocenter: Graph packages in R</title>
+<title>Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package</title>
 
 
+<link rel="canonical" href="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-10-15"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-10-15"/>
+<meta property="article:published" itemprop="datePublished" content="2022-05-07"/>
+<meta property="article:created" itemprop="dateCreated" content="2022-05-07"/>
 <meta name="article:author" content="am-innocenter"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Data &amp; Statistics Musings with Innocenter: Graph packages in R"/>
+<meta property="og:title" content="Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package"/>
 <meta property="og:type" content="article"/>
+<meta property="og:url" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"/>
+<meta property="og:image" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png"/>
+<meta property="og:image:width" content="1248"/>
+<meta property="og:image:height" content="768"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:site_name" content="Data &amp; Statistics Musings with Innocenter"/>
+<meta property="og:site_name" content="Data &amp; Statistics Musings"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Data &amp; Statistics Musings with Innocenter: Graph packages in R"/>
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package"/>
+<meta property="twitter:url" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"/>
+<meta property="twitter:image" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png"/>
+<meta property="twitter:image:width" content="1248"/>
+<meta property="twitter:image:height" content="768"/>
 
+<!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
+<meta name="citation_title" content="Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package"/>
+<meta name="citation_fulltext_html_url" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"/>
+<meta name="citation_online_date" content="2022/05/07"/>
+<meta name="citation_publication_date" content="2022/05/07"/>
+<meta name="citation_author" content="am-innocenter"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","draft","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Graph packages in R"]},{"type":"character","attributes":{},"value":["Graphs","R-packges"]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["am-innocenter"]}]}]},{"type":"character","attributes":{},"value":["10-15-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","draft","author","date","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Probabilistic Graphical Modelling with bnlearn package"]},{"type":"character","attributes":{},"value":["DAGs","Bayesian networks","R-packages"]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["am-innocenter"]}]}]},{"type":"character","attributes":{},"value":["2022-05-07"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"]},{"type":"character","attributes":{},"value":["innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["graph-r-packages_files/anchor-4.2.2/anchor.min.js","graph-r-packages_files/bowser-1.9.3/bowser.min.js","graph-r-packages_files/distill-2.2.21/template.v2.js","graph-r-packages_files/header-attrs-2.11/header-attrs.js","graph-r-packages_files/jquery-3.5.1/AUTHORS.txt","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.js","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.min.js","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.min.map","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.js","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.min.js","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.min.map","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.js","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.min.js","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.min.map","graph-r-packages_files/jquery-3.5.1/LICENSE.txt","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.js","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.min.js","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.min.map","graph-r-packages_files/popper-2.6.0/popper.min.js","graph-r-packages_files/tippy-6.2.7/tippy-bundle.umd.min.js","graph-r-packages_files/tippy-6.2.7/tippy-light-border.css","graph-r-packages_files/tippy-6.2.7/tippy.css","graph-r-packages_files/tippy-6.2.7/tippy.umd.min.js","graph-r-packages_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["graph-r-packages_files/anchor-4.2.2/anchor.min.js","graph-r-packages_files/bowser-1.9.3/bowser.min.js","graph-r-packages_files/distill-2.2.21/template.v2.js","graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png","graph-r-packages_files/header-attrs-2.11/header-attrs.js","graph-r-packages_files/header-attrs-2.14/header-attrs.js","graph-r-packages_files/jquery-3.5.1/AUTHORS.txt","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.js","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.min.js","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.min.map","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.js","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.min.js","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.min.map","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.js","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.min.js","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.min.map","graph-r-packages_files/jquery-3.5.1/LICENSE.txt","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.js","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.min.js","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.min.map","graph-r-packages_files/popper-2.6.0/popper.min.js","graph-r-packages_files/tippy-6.2.7/tippy-bundle.umd.min.js","graph-r-packages_files/tippy-6.2.7/tippy-light-border.css","graph-r-packages_files/tippy-6.2.7/tippy.css","graph-r-packages_files/tippy-6.2.7/tippy.umd.min.js","graph-r-packages_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2042,7 +2057,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2134,7 +2149,7 @@ li::marker {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Graph packages in R","authors":[{"author":"am-innocenter","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-15T00:00:00.000+13:00","citationText":"am-innocenter, 2021"}
+{"title":"Probabilistic Graphical Modelling with bnlearn package","authors":[{"author":"am-innocenter","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-05-07T00:00:00.000+12:00","citationText":"am-innocenter, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2142,7 +2157,7 @@ li::marker {
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="../../index.html" class="title">Data &amp; Statistics Musings with Innocenter</a>
+<a href="../../index.html" class="title">Data &amp; Statistics Musings</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
@@ -2164,11 +2179,12 @@ li::marker {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Graph packages in R</h1>
+<h1>Probabilistic Graphical Modelling with bnlearn package</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-  <a href="../../index.html#category:Graphs" class="dt-tag">Graphs</a>
-  <a href="../../index.html#category:R-packges" class="dt-tag">R-packges</a>
+  <a href="../../index.html#category:DAGs" class="dt-tag">DAGs</a>
+  <a href="../../index.html#category:Bayesian_networks" class="dt-tag">Bayesian networks</a>
+  <a href="../../index.html#category:R-packages" class="dt-tag">R-packages</a>
 </div>
 <!--/radix_placeholder_categories-->
 
@@ -2177,13 +2193,50 @@ li::marker {
 <div class="d-byline">
   am-innocenter  
   
-<br/>10-15-2021
+<br/>2022-05-07
 </div>
 
 <div class="d-article">
 <p>An analysis for R-Packages built for graphs</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>DAGs are</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<p><img src="graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png" width="624" data-distill-preview=1 /></p>
+</div>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
+<div class="article-footer">
+  <p class="social_footer">
+    <span class="disqus-comments">
+      <i class="fas fa-comments"></i>
+      &nbsp;
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2021-10-15-graph-r-packages/">Comment on this article</span>
+    </span>
+    <span class="article-sharing">
+      Share: &nbsp;
+      <a href="https://twitter.com/share?text=Probabilistic%20Graphical%20Modelling%20with%20bnlearn%20package&amp;url=innocenter-amima.rbind.io%2Fposts%2F2021-10-15-graph-r-packages%2F">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=innocenter-amima.rbind.io%2Fposts%2F2021-10-15-graph-r-packages%2F&amp;title=Probabilistic%20Graphical%20Modelling%20with%20bnlearn%20package">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </span>
+  </p>
+  <script id="dsq-count-scr" src="https://innocenter.disqus.com/count.js" async></script>
+  <div id="disqus_thread" class="hidden"></div>
+  <script type="text/javascript" cookie-consent="functionality">
+var disqus_config = function () {
+  this.page.url = 'innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/';
+  this.page.identifier = 'posts/2021-10-15-graph-r-packages/';
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://innocenter.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+</div>
 <!--/radix_placeholder_article_footer-->
 </div>
 
@@ -2194,7 +2247,18 @@ li::marker {
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+  <h3 id="citation">Citation</h3>
+  <p>For attribution, please cite this work as</p>
+  <pre class="citation-appendix short">am-innocenter (2022, May 7). Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package. Retrieved from innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/</pre>
+  <p>BibTeX citation</p>
+  <pre class="citation-appendix long">@misc{am-innocenter2022probabilistic,
+  author = {am-innocenter, },
+  title = {Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package},
+  url = {innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/},
+  year = {2022}
+}</pre>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

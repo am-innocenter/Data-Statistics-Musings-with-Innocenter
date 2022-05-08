@@ -13,5 +13,20 @@
     "preview": {},
     "last_modified": "2022-05-08T14:38:35+12:00",
     "input_file": {}
+  },
+  {
+    "path": "leaRn/2019-08-18-errorknitting/",
+    "title": "Error Knitting: R markdown not knitting",
+    "description": "Setting up .Rprofile",
+    "author": [],
+    "date": "2019-08-18",
+    "categories": [
+      "Errors",
+      "R setup"
+    ],
+    "contents": "\nI was getting errors knitting .Rmarkdown or .Rmd files and the\nculprint was that I had multiple .Rprofiles in my Home and project\ndirectories. The error is as shown below\n\nEverytime I restarted the machine it was loading the previous\nworkspace with the following error.\n\nAt first I thought .RData was the culprint and I unliked it using\nunlink(“~/.RData”). It still did not solve the problem.\nI had updated to the latest Rversion and my first instinct was update\nlibraries, uninstall and reinstall R+Rstudio but still the error was\nthere anytime I tried knitting. I tried most suggestions provided such\nas including self_contained: no and even installed tinytex :\ntinytex::install_tinytex().\nSolution\n\nThe following solution was provided by Yihue Xie.\n\nFirst, I had to uncheck the Restore workspace in the Global settings\nas show below and checked if the project directory had any .Rprofile and\nset it according to this link.\nThe following are some great resources that helped me\nR\nsetup\nStartup\n- Rprofile\nFinally, I can run my files without any hustle. Thanks to the support\nof Yihue Xhie and Christopher Dervieux. They helped me figure out where\nthe problem was.\n\nIf you’d like to refer to the conversation, I lodged an issue to the\nRstudio community and Github here.\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-05-08T17:22:20+12:00",
+    "input_file": "errorknitting.knit.md"
   }
 ]

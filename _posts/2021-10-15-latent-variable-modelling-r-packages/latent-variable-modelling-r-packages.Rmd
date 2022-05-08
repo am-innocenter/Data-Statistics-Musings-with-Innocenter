@@ -1,12 +1,11 @@
 ---
 title: "Latent Variable Modelling R-packages"
 # listing: posts
-draft: false
+draft: true
 # description: 
 categories:
   - Factor Analysis
   - GLLVMs
-  - R-packages
 
 date: 10-15-2021
 output:

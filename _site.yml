@@ -10,19 +10,19 @@ collections:
     authors_metadata: false #names of authors on teh left-side
     feed_items_max: 30
     disqus:
-      shortname: innocenter #another-data-enthusiast.netlify.com
+      # shortname: innocenter #another-data-enthusiast.netlify.com
       hidden: true
     share: [twitter, linkedin]
     citations: false
 
 # collections:
-  LeaRn:
+  leaRn:
     categories: true
     categories_metadata: true
     authors_metadata: false #names of authors on teh left-side
     feed_items_max: 30
     disqus: 
-     shortname: innocenter #another-data-enthusiast.netlify.com
+     # shortname: innocenter #another-data-enthusiast.netlify.com
     share: [twitter, linkedin]
     citations: false
     

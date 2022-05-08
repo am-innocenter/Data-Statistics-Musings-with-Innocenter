@@ -1,0 +1,182 @@
+---
+title: "Understanding US Student Loan Debt"
+description: |
+  Perform data visualization and determine the most preferred method of payment for student loans in the US.
+categories:
+  - TidyTuesday 
+  - Data viz
+
+# draft: true
+date: 2019-11-26
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+
+```{r, message=FALSE, include=FALSE}
+library(tidyverse)
+library(extrafont)
+library(directlabels)
+library(ggrepel)
+library(patchwork)
+```
+
+
+This week the data was inspired from the [Dignity & Debt](https://www.dignityanddebt.org/projects/student-debt-racial-disparities/) project. This will help in understanding and spreading awareness around Student Loan debt. The data source is [here](https://studentaid.gov/data-center/student/default)
+
+The objective for this is to perform data visualization and determine the most preferred method of payment for student loans in the US. I will use `patchwork` package to combine plots.
+
+Loading the data
+
+```{r}
+loans <- read.csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-11-26/loans.csv")
+
+glimpse(loans)
+```
+
+Original data file can be accessed through the weekly TidyTuesday Github reporsitory in this [link](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-11-26/loans.csv) and data source is [here](https://studentaid.ed.gov/sa/about/data-center/student/default)
+
+
+
+Renaming columns 
+
+```{r}
+loans %>% 
+  mutate(year = case_when(year == 15 ~ 2015, 
+                          year == 16 ~ 2016,
+                          year == 17 ~ 2017,
+                          year == 18 ~ 2018)) -> loans
+
+```
+
+
+```{r}
+loans %>%
+  group_by(year) %>%
+  summarise(Total.starting = sum(starting, na.rm=TRUE)/10^9,
+            Total.added = sum(added, na.rm = TRUE)/10^9,
+            Total.repaid = sum(total, na.rm=TRUE)/10^9,
+            consolidation.pay = sum(consolidation, na.rm = TRUE)/10^9,
+            rehabilitation.pay = sum(rehabilitation, na.rm = TRUE)/10^9,
+            voluntary.pay = sum(voluntary_payments, na.rm=TRUE)/10^9,
+            wagegarnishment.pay =sum(wage_garnishments, na.rm = TRUE)/10^9 ) %>%
+  arrange(desc(year))  %>%
+  ungroup() -> payment.summary
+```
+
+```{r, layout="l-body-outset", preview=TRUE}
+loan1 <- payment.summary %>% 
+  pivot_longer(starts_with("Total"), names_to = "status", values_to = "totals")  %>% 
+  mutate(label = if_else(year == max(year), as.character(status), NA_character_)) %>% 
+  ggplot(mapping = aes(year, totals, col=status)) +
+    geom_line(show.legend = FALSE)+
+    scale_color_discrete(guide = "none") +
+    theme_classic() +
+  labs(title= "Loan Amounts per Year",
+       x= "Year", y="Amount in USD (billion)", caption = "By am_innocenter for #TidyTuesdy 26.11.2019 \n Data source : studentaid.ed.gov")+
+  geom_label_repel(aes(label=label),nudge_x = 1, na.rm = TRUE )+
+  theme(panel.background = element_rect(fill="gray8"))  + #, colour = "#6D9EC1")) +
+    theme(text = element_text( size = 12),
+      plot.caption = element_text( size=10, color = "grey40"),
+        plot.title =element_text(size = 14, face="bold") ) 
+```
+
+
+
+
+```{r}
+loan2  <-  payment.summary %>% 
+  pivot_longer(starts_with("Total"), names_to = "status", values_to = "totals")  %>% 
+  mutate(label = if_else(year == max(year), as.character(status), NA_character_)) %>% 
+  ggplot(mapping = aes(year, totals, col=status)) +
+    geom_line(show.legend = FALSE)+
+    scale_color_discrete(guide = "none") +
+    scale_y_log10() +
+    theme_classic() +
+    labs(title= "Loan Amounts per Year", 
+       caption = "By am_innocenter for #TidyTuesdy 26.11.2019 \n Data source : studentaid.ed.gov", 
+       x= "Year", y="Log 10 of Amount in USD (billion)"
+    )+
+    geom_label_repel(aes(label=label),nudge_x = 1, na.rm = TRUE )+
+    theme(panel.background = element_rect(fill="gray8"))+ #, colour = "#6D9EC1")) +
+    theme(text = element_text( size = 12),
+      plot.caption = element_text( size=10, color = "grey40"),
+        plot.title =element_text(size = 14, face="bold") ) 
+```
+
+
+```{r}
+loan1 + loan2
+```
+
+
+
+
+```{r}
+payment1 <- payment.summary %>% 
+  pivot_longer(ends_with("pay"), names_to = "Method", values_to = "Payment")   %>% 
+  mutate(label = if_else(year == max(year), as.character(Method), NA_character_)) %>% 
+  ggplot(mapping = aes(year, Payment, col=Method)) +
+  geom_line(show.legend = FALSE) +
+  scale_color_discrete(guide = "none") +
+  theme_classic() +
+  labs(title= "Payment Methods & Amount Paid per Year",
+       x= "Year", y="Amount in USD (billion)", caption = "By am_innocenter for #TidyTuesdy 26.11.2019 \n Data source : studentaid.ed.gov")+
+  geom_label_repel(aes(label=label),nudge_x = 2, na.rm = TRUE )+
+  theme(panel.background = element_rect(fill="gray8")) + #, colour = "#6D9EC1")) +
+  theme(text = element_text( size = 12),
+        plot.caption = element_text( size=10, color = "grey40"),
+        plot.title =element_text(size = 14, face="bold") ) 
+
+
+```
+
+
+```{r}
+
+payment2 <- payment.summary %>% 
+  pivot_longer(ends_with("pay"), names_to = "Method", values_to = "Payment")   %>% 
+  mutate(label = if_else(year == max(year), as.character(Method), NA_character_)) %>% 
+  ggplot(mapping = aes(year, Payment, col=Method)) +
+  geom_line(show.legend = FALSE) +
+  scale_color_discrete(guide ="none") +
+  scale_y_log10() +
+  theme_classic() +
+  labs(title= "Payment Methods & Amount Paid per Year",
+       x= "Year", y="Log 10 of Amount in USD (billion)", caption = "By am_innocenter for #TidyTuesdy 26.11.2019 \n Data source : studentaid.ed.gov")+
+  geom_label_repel(aes(label=label),nudge_x = 0.4, na.rm = TRUE )+
+  theme(panel.background = element_rect(fill="gray8")) + #, colour = "#6D9EC1")) +
+  theme(text = element_text( size = 12),
+        plot.caption = element_text( size=10, color = "grey40"),
+        plot.title =element_text(size = 14, face="bold") ) 
+```
+
+
+
+```{r}
+payment1 + payment2
+```
+
+```{r}
+
+loans %>% 
+  group_by(agency_name) %>% 
+  summarise(Total.starting = sum(starting, na.rm=TRUE)/10^9, 
+            Total.added = sum(added, na.rm = TRUE)/10^9,
+            Total.repaid = sum(total, na.rm=TRUE)/10^9) %>% 
+  arrange(desc(Total.starting)) %>% 
+  filter(Total.starting > 30) %>% 
+  ungroup() %>% 
+  kableExtra::kable() %>% kableExtra::kable_styling()
+```
+
+
+

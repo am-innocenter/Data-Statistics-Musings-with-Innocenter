@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>innocenter-amima.rbind.io/about.html</loc>
-    <lastmod>2022-05-07T17:04:19+12:00</lastmod>
+    <lastmod>2022-05-10T21:42:59+12:00</lastmod>
   </url>
   <url>
     <loc>innocenter-amima.rbind.io/</loc>
     <lastmod>2022-05-07T15:49:06+12:00</lastmod>
   </url>
   <url>
-    <loc>innocenter-amima.rbind.io/leaRn.html</loc>
-    <lastmod>2022-05-08T13:25:45+12:00</lastmod>
+    <loc>innocenter-amima.rbind.io/projects.html</loc>
+    <lastmod>2022-05-10T18:58:41+12:00</lastmod>
   </url>
   <url>
     <loc>innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/</loc>
@@ -30,18 +30,10 @@
   </url>
   <url>
     <loc>innocenter-amima.rbind.io/posts/2019-08-18-getting-started-with-a-blog/</loc>
-    <lastmod>2022-05-08T14:38:35+12:00</lastmod>
+    <lastmod>2022-05-10T21:52:31+12:00</lastmod>
   </url>
   <url>
     <loc>innocenter-amima.rbind.io/posts/2020-03-30-eidobserved/</loc>
     <lastmod>2022-05-08T16:53:41+12:00</lastmod>
-  </url>
-  <url>
-    <loc>innocenter-amima.rbind.io/leaRn/2019-08-18-getting-started-with-a-blog/</loc>
-    <lastmod>2022-05-08T14:38:35+12:00</lastmod>
-  </url>
-  <url>
-    <loc>innocenter-amima.rbind.io/leaRn/2019-08-18-errorknitting/</loc>
-    <lastmod>2022-05-08T17:22:20+12:00</lastmod>
   </url>
 </urlset>

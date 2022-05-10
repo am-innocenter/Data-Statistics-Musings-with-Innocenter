@@ -87,38 +87,638 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Getting Started with a Blog</title>
+  <title>Data &amp; Statistics Musings: Projects</title>
 
-  <meta property="description" itemprop="description" content="Setting up a blog in R studio with Blogdown, Hugo and continuous deployment with Github and Netlify."/>
+  <meta property="description" itemprop="description" content="Learn packages and tools in R"/>
 
 
-  <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2019-08-18"/>
-  <meta property="article:created" itemprop="dateCreated" content="2019-08-18"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Getting Started with a Blog"/>
+  <meta property="og:title" content="Data &amp; Statistics Musings: Projects"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Setting up a blog in R studio with Blogdown, Hugo and continuous deployment with Github and Netlify."/>
+  <meta property="og:description" content="Learn packages and tools in R"/>
   <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="Data &amp; Statistics Musings"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Getting Started with a Blog"/>
-  <meta property="twitter:description" content="Setting up a blog in R studio with Blogdown, Hugo and continuous deployment with Github and Netlify."/>
+  <meta property="twitter:title" content="Data &amp; Statistics Musings: Projects"/>
+  <meta property="twitter:description" content="Learn packages and tools in R"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Getting Started with a Blog"]},{"type":"character","attributes":{},"value":["Setting up a blog in R studio with Blogdown, Hugo and continuous deployment with Github and Netlify.\n"]},{"type":"character","attributes":{},"value":["Blogdown","Netlify"]},{"type":"character","attributes":{},"value":["2019-08-18"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","listing"]}},"value":[{"type":"character","attributes":{},"value":["Projects"]},{"type":"character","attributes":{},"value":["Learn packages and tools in R"]},{"type":"character","attributes":{},"value":["projects"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  
-  <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["blogdown1.png","blogdown2.png","getting-started-with-a-blog_files/anchor-4.2.2/anchor.min.js","getting-started-with-a-blog_files/bowser-1.9.3/bowser.min.js","getting-started-with-a-blog_files/distill-2.2.21/template.v2.js","getting-started-with-a-blog_files/header-attrs-2.14/header-attrs.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.min.js","getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.min.map","getting-started-with-a-blog_files/popper-2.6.0/popper.min.js","getting-started-with-a-blog_files/tippy-6.2.7/tippy-bundle.umd.min.js","getting-started-with-a-blog_files/tippy-6.2.7/tippy-light-border.css","getting-started-with-a-blog_files/tippy-6.2.7/tippy.css","getting-started-with-a-blog_files/tippy-6.2.7/tippy.umd.min.js","getting-started-with-a-blog_files/webcomponents-2.0.0/webcomponents.js","netlify1.png","netlify2.png","netlify3.png","repo1.png"]}
-  </script>
   <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+  <script type="application/javascript">
+
+  function getMeta(metaName) {
+    var metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute('name') === metaName) {
+        return metas[i].getAttribute('content');
+      }
+    }
+    return '';
+  }
+
+  function offsetURL(url) {
+    var offset = getMeta('distill:offset');
+    return offset ? offset + '/' + url : url;
+  }
+
+  function createFuseIndex() {
+
+    // create fuse index
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
+    var fuse = new window.Fuse([], options);
+
+    // fetch the main search.json
+    return fetch(offsetURL('search.json'))
+      .then(function(response) {
+        if (response.status == 200) {
+          return response.json().then(function(json) {
+            // index main articles
+            json.articles.forEach(function(article) {
+              fuse.add(article);
+            });
+            // download collections and index their articles
+            return Promise.all(json.collections.map(function(collection) {
+              return fetch(offsetURL(collection)).then(function(response) {
+                if (response.status === 200) {
+                  return response.json().then(function(articles) {
+                    articles.forEach(function(article) {
+                      fuse.add(article);
+                    });
+                  })
+                } else {
+                  return Promise.reject(
+                    new Error('Unexpected status from search index request: ' +
+                              response.status)
+                  );
+                }
+              });
+            })).then(function() {
+              return fuse;
+            });
+          });
+
+        } else {
+          return Promise.reject(
+            new Error('Unexpected status from search index request: ' +
+                        response.status)
+          );
+        }
+      });
+  }
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // get search element (bail if we don't have one)
+    var searchEl = window.document.getElementById('distill-search');
+    if (!searchEl)
+      return;
+
+    createFuseIndex()
+      .then(function(fuse) {
+
+        // make search box visible
+        searchEl.classList.remove('hidden');
+
+        // initialize autocomplete
+        var options = {
+          autoselect: true,
+          hint: false,
+          minLength: 2,
+        };
+        window.autocomplete(searchEl, options, [{
+          source: function(query, callback) {
+            const searchOptions = {
+              isCaseSensitive: false,
+              shouldSort: true,
+              minMatchCharLength: 2,
+              limit: 10,
+            };
+            var results = fuse.search(query, searchOptions);
+            callback(results
+              .map(function(result) { return result.item; })
+            );
+          },
+          templates: {
+            suggestion: function(suggestion) {
+              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                : '';
+              var html = `
+                <div class="search-item">
+                  <h3>${suggestion.title}</h3>
+                  <div class="search-item-description">
+                    ${suggestion.description || ''}
+                  </div>
+                  <div class="search-item-preview">
+                    ${img}
+                  </div>
+                </div>
+              `;
+              return html;
+            }
+          }
+        }]).on('autocomplete:selected', function(event, suggestion) {
+          window.location.href = offsetURL(suggestion.path);
+        });
+        // remove inline display style on autocompleter (we want to
+        // manage responsive display via css)
+        $('.algolia-autocomplete').css("display", "");
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+  });
+
+  </script>
+
+  <style type="text/css">
+
+  .nav-search {
+    font-size: x-small;
+  }
+
+  /* Algolioa Autocomplete */
+
+  .algolia-autocomplete {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: sub;
+    background-color: white;
+    color: black;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    border: 1px #0F2E3D solid;
+    width: 180px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-nav .algolia-autocomplete {
+      display: none;
+      visibility: hidden;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete {
+      display: inline-block;
+      visibility: visible;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+      margin-left: 0;
+      width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 90%;
+    outline: none;
+    border: none;
+  }
+
+  .algolia-autocomplete .aa-hint {
+    color: #999;
+  }
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 550px;
+    max-height: 70vh;
+    overflow-x: visible;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-top: 3px;
+    margin-left: -150px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #999;
+    border-top: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    cursor: pointer;
+    padding: 5px 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+    overflow: hidden;
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+    font-size: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 5px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+    display: inline-block;
+    overflow: hidden;
+    height: 2.8em;
+    width: 80%;
+    margin-right: 4%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+    display: inline-block;
+    width: 15%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+    height: 3em;
+    width: auto;
+    display: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+    display: initial;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #eee;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  </style>
+
+
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -1437,218 +2037,278 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="getting-started-with-a-blog_files/header-attrs-2.14/header-attrs.js"></script>
-  <script src="getting-started-with-a-blog_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <script src="getting-started-with-a-blog_files/popper-2.6.0/popper.min.js"></script>
-  <link href="getting-started-with-a-blog_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="getting-started-with-a-blog_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="getting-started-with-a-blog_files/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="getting-started-with-a-blog_files/anchor-4.2.2/anchor.min.js"></script>
-  <script src="getting-started-with-a-blog_files/bowser-1.9.3/bowser.min.js"></script>
-  <script src="getting-started-with-a-blog_files/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="getting-started-with-a-blog_files/distill-2.2.21/template.v2.js"></script>
+  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  /* Import fonts from Google's API */
+  @import url('https://fonts.googleapis.com/css2?family=Cardo');
+  @import url('https://fonts.googleapis.com/css2?family=Alata');
+
+
+
+  .distill-site-nav {
+      font-family: 'Alata', sans-serif;
+      color: #000;
+      background-color: #fff;
+      font-size: 15px;
+      font-weight: 400;
+  }
+
+  .distill-site-header {
+      font-family: 'Alata', sans-serif;
+      color: #000;
+      background-color: #fff;
+      font-size: 15px;
+      font-weight: 400;
+  }
+
+  .distill-site-nav a:hover {
+      color: #ff00ff;
+  }
+
+  .categories li > a:hover {
+      color: #00ff00;
+      border-bottom: 1px #00ff00;
+  }
+
+  p a:hover  {
+      color: #00ff00;
+  }
+
+  /* Change appearance of headers */
+  h1, h2, h3, h4, h5 {
+      font-family: 'Alata', sans-serif;
+      font-weight: 700;
+  }
+
+  /* Use specific font in the body of the text */
+  html, body, p {
+      
+      font-family: 'Cardo', serif;
+      font-weight: 200;
+      line-height: 1.3; 
+      font-size: 1.075em;
+      font-style: normal;
+      
+  }
+
+  .posts-list .description p {
+      font-family: 'Cardo', serif !important;
+      color: black !important;
+  }
+
+  .posts-list .description h2 {
+      font-family: 'Alata', sans-serif !important;
+  }
+
+  d-appendix {
+      color: rgb(0, 0, 0) !important;
+  }
+
+  li::marker {
+      font-weight: 700;
+      font-size: 1.125em;
+  }
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="mmstyle.css" type="text/css"/>
 
 </head>
 
-<body>
+<body class="layout-listing">
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Getting Started with a Blog","description":"Setting up a blog in R studio with Blogdown, Hugo and continuous deployment with Github and Netlify.","authors":[],"publishedDate":"2019-08-18T00:00:00.000+12:00"}
+{"title":"Projects","description":"Learn packages and tools in R","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">Data &amp; Statistics Musings</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="index.html">Blog</a>
+<a href="projects.html">Projects</a>
+<a href="about.html">About</a>
+<a href="index.xml">
+<i class="fa fa-rss" aria-hidden="true"></i>
+</a>
+<a href="https://github.com/am-innocenter">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
+<!--radix_placeholder_article_listing-->
+
+
+<script type="application/javascript">
+
+function init_posts_list() {
+
+  function load_image(img) {
+    var src = $(img).attr('data-src');
+    if (src) {
+      $(img).attr('src', src);
+      $(img).on("load", function() {
+        img.removeAttribute('data-src');
+      });
+    }
+  }
+
+  function set_posts_visible(posts, visible) {
+    if (visible) {
+
+      // show bottom border by default
+      $(posts).removeClass('post-preview-last');
+
+      // apply limits if need be
+      var max_posts = 25;
+      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
+      if (apply_limits && posts.length > max_posts) {
+        posts = $(posts).slice(0, max_posts);
+      } else {
+        $('.posts-more a').addClass('hidden');
+      }
+
+      // apply last style
+      $(posts.slice(-1)[0]).addClass('post-preview-last');
+
+      $(posts).removeClass('hidden');
+      $(posts).find('img[data-src]').each(function(i, img) {
+        load_image(img);
+      });
+    } else {
+      $(posts).addClass('hidden');
+    }
+  }
+
+  function apply_hash_filter() {
+
+    // clear active state
+    $('.categories .active').removeClass('active');
+
+    // mark all posts invisible to start
+    set_posts_visible($('.posts-list').children('a'), false);
+
+    // if we have a hash filter
+    if (window.location.hash && window.location.hash.startsWith("#category:")) {
+
+      // mark posts that match the category visible
+      var page_category = window.location.hash.replace(/^#category:/, "");
+      page_category = decodeURIComponent(page_category)
+      var posts = $('.post-metadata').map(function(idx, script) {
+        var metadata = $.parseJSON($(script).html());
+        var post = null;
+        $.each(metadata.categories, function(idx, category) {
+          category = category.replace(/ /g,"_");
+          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
+            post = $(script).parent().get();
+            return false;
+          }
+        });
+        return post;
+      });
+      set_posts_visible(posts, true);
+
+      // mark the hash active
+      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
+
+      // update the list_caption
+      var list_caption = $('.posts-list-caption');
+      var caption = (page_category || '').toLowerCase() === "articles"
+        ? list_caption.attr('data-caption')
+        : ('Category: ' + page_category.replace(/_/g," "));
+      list_caption.text(caption);
+
+    } else {
+
+      // no hash filter, make all posts visible (subject to max display)
+      set_posts_visible($('.posts-list').children(), true);
+
+      // reset list caption
+      var list_caption = $('.posts-list-caption');
+      list_caption.text(list_caption.attr('data-caption'));
+
+
+    }
+  }
+
+  // more articles
+  function apply_post_limits(apply) {
+    if (apply) {
+      $('.posts-container').addClass('posts-apply-limit');
+      $('.posts-more a').removeClass('hidden');
+    } else {
+      $('.posts-container').removeClass('posts-apply-limit');
+      $('.posts-more a').addClass('hidden');
+    }
+  }
+
+  // click handling for tags
+  $('.dt-tag').click(function(ev) {
+    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
+    return false;
+  })
+
+  // hash filter handling
+  apply_hash_filter();
+  $(window).on('hashchange',function() {
+    apply_post_limits(true);
+    apply_hash_filter();
+  });
+
+  // more articles link
+  $('.posts-more a').click(function(e) {
+    e.preventDefault();
+    apply_post_limits(false);
+    apply_hash_filter();
+    return false;
+  });
+
+}
+
+</script>
+
+
+
+<div class="posts-container posts-apply-limit l-page">
+<div class="posts-list">
+<h1 class="posts-list-caption" data-caption="Projects">Projects</h1>
+</div>
+<div class="posts-more">
+<a href="#">More articles &raquo;</a>
+</div>
+</div>
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Getting Started with a Blog</h1>
+<h1>Projects</h1>
 <!--radix_placeholder_categories-->
-<div class="dt-tags">
-<div class="dt=tag">Blogdown</div>
-<div class="dt=tag">Netlify</div>
-</div>
 <!--/radix_placeholder_categories-->
-<p><p>Setting up a blog in R studio with Blogdown, Hugo and continuous
-deployment with Github and Netlify.</p></p>
+<p>Learn packages and tools in R</p>
 </div>
 
 
 <div class="d-article">
-<p>I have been creating this blog in my mind for months and hey I
-finally did it!</p>
-<p>Below I will show you how I set up my personal blog using R Blogdown,
-Hugo, Github and Netlify. I will continuously update and improve it.
-Comments or suggestions on how to improve it are welcome :-)</p>
-<p>To begin with, you will need the following to set up your blog</p>
-<blockquote>
-<ol type="1">
-<li>Install Blogdown.</li>
-<li>Select a Hugo theme.</li>
-<li>Set up blogdown</li>
-<li>Create a Github repository for your website.</li>
-<li>Set up Netlify for continuous deployment</li>
-<li>Continue editing your blog and enjoy writing!!</li>
-</ol>
-</blockquote>
-<p>Scroll down to unlock the bonus tip/idea :-)</p>
-<h2 id="installing-blogdown">1. Installing Blogdown</h2>
-<p>Install blogdown in R studio from CRAN
-<code>install.packages("blogdown")</code></p>
-<p>Or, install from GitHub</p>
-<p><code>if (!requireNamespace("devtools")) install.packages("devtools") devtools::install_github("rstudio/blogdown")</code></p>
-<p><a href="https://bookdown.org/yihui/blogdown/installation.html">More
-here : blogdown installation</a></p>
-<h2 id="selecting-a-hugo-theme">2. Selecting a Hugo Theme</h2>
-<p>Hugo is a lightweight engine that can be used to create static
-websites. Hugo uses <code>Go</code> library for its template engine. You
-will be required to select a theme, here is the <a
-href="https://themes.gohugo.io/">complete list</a>. More on setting up
-Hugo themes <a
-href="https://bookdown.org/yihui/blogdown/themes.html">here</a>.</p>
-<h2 id="set-up-blogdown">3. Set up Blogdown</h2>
-<p>After selecting the Hugo theme, using R studio open a new project and
-directory: using File → New Project → New Directory → Website using
-Blogdown</p>
-<p><img src="blogdown1.png" /></p>
-<h1
-id="r-knitrinclude_graphicsblogdown1.png"><code>{r} # knitr::include_graphics("blogdown1.png") #</code></h1>
-<p>You will be required to specify the directory name of the blog, the
-subdirectory where the blog is going to be place and the theme you
-selected in step 2 above. Complete the set up by clicking create
-project. More on blogdown Rstudio IDE <a
-href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">here</a>.
-You can modify the config.toml file, create new posts…</p>
-<p>The website created can be built interactively by using
-<code>blogdown::serve_site()</code> or clicking Addins as shown</p>
-<p><img src="blogdown2.png" /></p>
-<p>Now you can create a New Post by clicking <code>New Post</code> using
-the Addins or <code>new_post(title = 'xxx.md')</code> for markdown post
-or <code>new_post(title = 'xxxx.Rmd')</code> for R markdown files.</p>
-<h3 id="blogdown-structure">Blogdown Structure</h3>
-<p>Depending on the theme selected, kindly note</p>
-<blockquote>
-<ol type="1">
-<li><code>Static</code> folder : is the root folder for the new blog.
-This is a perfect place to include the images folder or pdf/materials
-folder.</li>
-<li><code>Public</code> folder : after building the website - the final
-rendered static HTML files and structure are stored here. This is the
-folder that shall be uploaded to Github.</li>
-<li><code>Theme</code> folder : all the formating for the Hugo theme you
-selected are stored here.</li>
-<li><code>Content</code> folder : is the folder containing all the posts
-you will create. Usually has some markdown or .Rmd from the example
-site.</li>
-</ol>
-</blockquote>
-<h2 id="deployment-with-github">4. Deployment with Github</h2>
-<p>Log into Github and create a new repository - do not add a readme.md
-yet. I prefer this way so that I do not have to make a
-<code>git pull</code> request.</p>
-<p><img src="repo1.png" /></p>
-<p>Push the existing website located in your local directory to the
-repository using the command line as shown below - note to change the
-working directory to public/ before initializing the GIT repository
-<code>cd ../public</code>. I noticed if the whole working directory is
-put on Github - you will be required to add a <code>netlify.toml</code>
-file - not sure if it was the theme I was using back then or it is
-universal. Best practise is to upload <code>public</code> folder since
-it contains the rendered HTML files of your website.</p>
-<p>After changing to <code>../public</code> folder where the HTML files
-are rendered do;</p>
-<ol type="1">
-<li><p><code>git init</code> : <em>to initialize the local
-directory/repository</em></p></li>
-<li><p><code>git remote add origin https://github.com/username/repositoryname.git</code>
-_for example <a
-href="https://github.com/innocenter/Another-Data-Enthusist.git_"
-class="uri">https://github.com/innocenter/Another-Data-Enthusist.git_</a></p></li>
-<li><p><code>git push -u origin master</code></p></li>
-</ol>
-<p>Now you can add a readme.md note. You will be required to pull(fetch
-and merge) the files if you add any file using Github online. Safe to
-update in local directory using <code>git add readme</code> then
-<code>git commit -m "read me"</code>.</p>
-<blockquote>
-<p>Although Github supports only Jekyly and not Hugo, you can publish
-static HTML pages. Reference the following <a
-href="https://bookdown.org/yihui/blogdown/github-pages.html">link</a></p>
-</blockquote>
-<h2 id="continous-deployment-with-netlify">5. Continous deployment with
-Netlify</h2>
-<p>Now worry not about having to upload the <em>public</em> folder to <a
-href="https://www.netlify.com">Netlify</a> everytime. Connect the Github
-repository and let Netlify continously deploy your website anytime you
-update.</p>
-<p>Another route will be to skip Github but everytime you will have to
-upload the public folder to Netlify.</p>
-<p>Log in to Netlify create a new site using Github</p>
-<p><img src="netlify1.png" /></p>
-<p>Select Github and follow the steps to deploy the website - netlify
-will turn to green if the deployment was a success.</p>
-<p><img src="netlify2.png" /></p>
-<p>You can edit the setting of your website name</p>
-<p><img src="netlify3.png" /></p>
-<p>Now you are ready to role - update Github by adding any new files and
-committing the changes. Now you have a domain name
-<code>website.netlify.com</code>- remember to edit the config.toml
-baseurl which was set with a trailing backslash
-<code>baseurl = "/"</code>. Copy the name of the website and replace it
-as <code>baseurl = "https://name-of-website.netlify.com"</code> This is
-why</p>
-<blockquote>
-<p>The only purpose for the baseurl field in the config is to define the
-full base URL of your website for deployment purposes.” - <span
-class="citation" data-cites="rdwatters">@rdwatters</span></p>
-</blockquote>
-<p><em>And the bonus is!!!!</em></p>
-<h2 id="adding-comment-section-using-disquis">Adding comment section
-using Disquis</h2>
-<p>You can include comments in your new webiste. Yay!! Follow the
-following reference <a
-href="https://notes.peter-baumgartner.net/tutorial/how-to-install-disqus-on-hugo/">How
-to install disqus on hugo</a> that provides clear way to setup.</p>
-<h3 id="working-on-a-post-and-prefer-to-upload-later">Working on a post
-and prefer to upload later?</h3>
-<p>No problem, if it is a markdown file, you can either</p>
-<ol type="1">
-<li><p>Create the content with a future or past <code>publishDate</code>
-value for example date : “2019-08-01” and publishDate:
-‘2020-03-04’</p></li>
-<li><p>Create content with draft: true status</p></li>
-</ol>
-<h3 id="other-useful-resources-for-setting-up-a-blog">Other useful
-resources for setting up a blog</h3>
-<p>Creating a website can be messy. You will actually get a lot of
-errors - The following resources might be useful. The helped me a
-lot.</p>
-<ul>
-<li><p><a
-href="http://estebanmoro.org/post/2019-02-02-setting-up-your-blog-with-rstudio-and-blogdown-i-creating-the-blog/">Creating
-the blog</a></p></li>
-<li><p><a href="https://bookdown.org/yihui/blogdown/">Blogdown book</a>
-by Yihui Xie, Amber Thomas, Alison Presmanes Hill</p></li>
-<li><p><a
-href="https://www.tylerclavelle.com/code/2017/blogdown/">Blogdown and
-Hugo</a></p></li>
-<li><p>Change the baseurl after getting a domain name. <a
-href="https://alison.rbind.io/post/2019-03-04-hugo-troubleshooting/">More
-here</a></p></li>
-<li><p>Long live Netlifly! <a
-href="https://yihui.name/en/2017/06/netlify-instead-of-github-pages/">here</a></p></li>
-</ul>
-<p>Happy blogging :-)</p>
-<p>Feel free to drop a comment or suggestion in the comment section.</p>
-<p>Update: I have moved my site from using blogdown to distil. Here is a
-great reference if planning to use <a
-href="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/">distil</a>.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

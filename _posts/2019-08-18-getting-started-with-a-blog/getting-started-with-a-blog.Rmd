@@ -19,6 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
+
 I have been creating this blog in my mind for months and hey I finally did it!
 
 Below I will show you how I set up my personal blog using R Blogdown, Hugo, Github and Netlify. I will continuously update and improve it. Comments or suggestions on how to improve it are welcome :-)
@@ -183,3 +184,4 @@ Feel free to drop a comment or suggestion in the comment section.
 
 
 
+Update: I have moved my site from using blogdown to distil. Here is a great reference if planning to use [distil](https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/). 

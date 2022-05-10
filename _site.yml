@@ -16,7 +16,7 @@ collections:
     citations: false
 
 # collections:
-  leaRn:
+  projects:
     categories: true
     categories_metadata: true
     authors_metadata: false #names of authors on teh left-side
@@ -37,8 +37,8 @@ navbar:
   right:
     - text: "Blog"
       href: index.html
-    # - text: "LeaRn with me"
-    #   href: leaRn.html
+    - text: "Projects"
+      href: projects.html
     - text: "About"
       href: about.html
     - icon: fa fa-rss

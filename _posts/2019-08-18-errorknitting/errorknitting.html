@@ -111,7 +111,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Error Knitting: R markdown not knitting"]},{"type":"character","attributes":{},"value":["Errors","R setup"]},{"type":"character","attributes":{},"value":["Setting up .Rprofile\n"]},{"type":"character","attributes":{},"value":["2019-08-18"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Error Knitting: R markdown not knitting"]},{"type":"character","attributes":{},"value":["R Errors"]},{"type":"character","attributes":{},"value":["Setting up .Rprofile\n"]},{"type":"character","attributes":{},"value":["2019-08-18"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1471,8 +1471,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Error Knitting: R markdown not knitting</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">Errors</div>
-<div class="dt=tag">R setup</div>
+<div class="dt=tag">R Errors</div>
 </div>
 <!--/radix_placeholder_categories-->
 <p><p>Setting up .Rprofile</p></p>
@@ -1481,17 +1480,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <p>I was getting errors knitting .Rmarkdown or .Rmd files and the
-culprint was that I had multiple .Rprofiles in my Home and project
+culprit was that I had multiple .Rprofiles in my Home and project
 directories. The error is as shown below</p>
 <p><img src="markdown_error.png" /></p>
-<p>Everytime I restarted the machine it was loading the previous
+<p>Every time I restarted the machine it was loading the previous
 workspace with the following error.</p>
 <p><img src="markdown_error2.png" /></p>
-<p>At first I thought .RData was the culprint and I unliked it using
+<p>At first I thought .RData was the culprit and I unlinked it using
 unlink(“~/.RData”). It still did not solve the problem.</p>
 <p>I had updated to the latest Rversion and my first instinct was update
 libraries, uninstall and reinstall R+Rstudio but still the error was
-there anytime I tried knitting. I tried most suggestions provided such
+there any time I tried knitting. I tried most suggestions provided such
 as including self_contained: no and even installed tinytex :
 tinytex::install_tinytex().</p>
 <h2 id="solution">Solution</h2>

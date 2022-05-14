@@ -1,11 +1,10 @@
 ---
-title: "Probabilistic Graphical Modelling with bnlearn package"
+title: "Application of Bayesian Networks to Viticulture"
 # listing: projects
 categories:
-  - DAGs
   - Bayesian networks
-  - R-packages
-draft: false
+  - R packages
+
 # author:
 #   - name: am-innocenter
 date: "`r Sys.Date()`"
@@ -19,7 +18,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
+Probabilistic Graphical Modelling
 
 An analysis for   R-Packages built for graphs
 

@@ -87,44 +87,37 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-<title>Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package</title>
+<title>Data &amp; Statistics Musings: Latent Variable Modelling R-packages</title>
 
 
-<link rel="canonical" href="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"/>
+<link rel="canonical" href="innocenter-amima.rbind.io/projects/2021-10-15-latent-variable-modelling-r-packages/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2022-05-07"/>
-<meta property="article:created" itemprop="dateCreated" content="2022-05-07"/>
-<meta name="article:author" content="am-innocenter"/>
+<meta property="article:published" itemprop="datePublished" content="2021-10-15"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-10-15"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package"/>
+<meta property="og:title" content="Data &amp; Statistics Musings: Latent Variable Modelling R-packages"/>
 <meta property="og:type" content="article"/>
-<meta property="og:url" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"/>
-<meta property="og:image" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png"/>
-<meta property="og:image:width" content="1248"/>
-<meta property="og:image:height" content="768"/>
+<meta property="og:url" content="innocenter-amima.rbind.io/projects/2021-10-15-latent-variable-modelling-r-packages/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Data &amp; Statistics Musings"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Data &amp; Statistics Musings: Probabilistic Graphical Modelling with bnlearn package"/>
-<meta property="twitter:url" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"/>
-<meta property="twitter:image" content="innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png"/>
-<meta property="twitter:image:width" content="1248"/>
-<meta property="twitter:image:height" content="768"/>
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Data &amp; Statistics Musings: Latent Variable Modelling R-packages"/>
+<meta property="twitter:url" content="innocenter-amima.rbind.io/projects/2021-10-15-latent-variable-modelling-r-packages/"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","draft","author","date","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Probabilistic Graphical Modelling with bnlearn package"]},{"type":"character","attributes":{},"value":["DAGs","Bayesian networks","R-packages"]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["am-innocenter"]}]}]},{"type":"character","attributes":{},"value":["2022-05-07"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["innocenter-amima.rbind.io/posts/2021-10-15-graph-r-packages/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","date","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Latent Variable Modelling R-packages"]},{"type":"character","attributes":{},"value":["R packages","GLLVMs"]},{"type":"character","attributes":{},"value":["10-15-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["innocenter-amima.rbind.io/projects/2021-10-15-latent-variable-modelling-r-packages/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["graph-r-packages_files/anchor-4.2.2/anchor.min.js","graph-r-packages_files/bowser-1.9.3/bowser.min.js","graph-r-packages_files/distill-2.2.21/template.v2.js","graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png","graph-r-packages_files/header-attrs-2.11/header-attrs.js","graph-r-packages_files/header-attrs-2.14/header-attrs.js","graph-r-packages_files/jquery-3.5.1/AUTHORS.txt","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.js","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.min.js","graph-r-packages_files/jquery-3.5.1/jquery-1.12.4.min.map","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.js","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.min.js","graph-r-packages_files/jquery-3.5.1/jquery-2.2.4.min.map","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.js","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.min.js","graph-r-packages_files/jquery-3.5.1/jquery-3.5.1.min.map","graph-r-packages_files/jquery-3.5.1/LICENSE.txt","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.js","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.min.js","graph-r-packages_files/jquery-3.6.0/jquery-3.6.0.min.map","graph-r-packages_files/popper-2.6.0/popper.min.js","graph-r-packages_files/tippy-6.2.7/tippy-bundle.umd.min.js","graph-r-packages_files/tippy-6.2.7/tippy-light-border.css","graph-r-packages_files/tippy-6.2.7/tippy.css","graph-r-packages_files/tippy-6.2.7/tippy.umd.min.js","graph-r-packages_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["latent-variable-modelling-r-packages_files/anchor-4.2.2/anchor.min.js","latent-variable-modelling-r-packages_files/bowser-1.9.3/bowser.min.js","latent-variable-modelling-r-packages_files/distill-2.2.21/template.v2.js","latent-variable-modelling-r-packages_files/header-attrs-2.11/header-attrs.js","latent-variable-modelling-r-packages_files/header-attrs-2.14/header-attrs.js","latent-variable-modelling-r-packages_files/jquery-3.5.1/AUTHORS.txt","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-1.12.4.js","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-1.12.4.min.js","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-1.12.4.min.map","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-2.2.4.js","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-2.2.4.min.js","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-2.2.4.min.map","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-3.5.1.js","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-3.5.1.min.js","latent-variable-modelling-r-packages_files/jquery-3.5.1/jquery-3.5.1.min.map","latent-variable-modelling-r-packages_files/jquery-3.5.1/LICENSE.txt","latent-variable-modelling-r-packages_files/jquery-3.6.0/jquery-3.6.0.js","latent-variable-modelling-r-packages_files/jquery-3.6.0/jquery-3.6.0.min.js","latent-variable-modelling-r-packages_files/jquery-3.6.0/jquery-3.6.0.min.map","latent-variable-modelling-r-packages_files/popper-2.6.0/popper.min.js","latent-variable-modelling-r-packages_files/tippy-6.2.7/tippy-bundle.umd.min.js","latent-variable-modelling-r-packages_files/tippy-6.2.7/tippy-light-border.css","latent-variable-modelling-r-packages_files/tippy-6.2.7/tippy.css","latent-variable-modelling-r-packages_files/tippy-6.2.7/tippy.umd.min.js","latent-variable-modelling-r-packages_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2143,7 +2136,7 @@ li::marker {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Probabilistic Graphical Modelling with bnlearn package","authors":[{"author":"am-innocenter","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-05-07T00:00:00.000+12:00","citationText":"am-innocenter, 2022"}
+{"title":"Latent Variable Modelling R-packages","authors":[],"publishedDate":"2021-10-15T00:00:00.000+13:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2173,29 +2166,20 @@ li::marker {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Probabilistic Graphical Modelling with bnlearn package</h1>
+<h1>Latent Variable Modelling R-packages</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-  <a href="../../index.html#category:DAGs" class="dt-tag">DAGs</a>
-  <a href="../../index.html#category:Bayesian_networks" class="dt-tag">Bayesian networks</a>
-  <a href="../../index.html#category:R-packages" class="dt-tag">R-packages</a>
+  <a href="../../projects.html#category:R_packages" class="dt-tag">R packages</a>
+  <a href="../../projects.html#category:GLLVMs" class="dt-tag">GLLVMs</a>
 </div>
 <!--/radix_placeholder_categories-->
 
 </div>
 
-<div class="d-byline">
-  am-innocenter  
-  
-<br/>2022-05-07
-</div>
 
 <div class="d-article">
-<p>An analysis for R-Packages built for graphs</p>
-<p>DAGs are</p>
-<div class="layout-chunk" data-layout="l-body-outset">
-<p><img src="graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png" width="624" data-distill-preview=1 /></p>
-</div>
+<p>Latent Variable Modelling R-packages
+<!-- create_post("learn RSQL", collection = "leaRn") --></p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
@@ -2203,10 +2187,10 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
   <p class="social_footer">
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://twitter.com/share?text=Probabilistic%20Graphical%20Modelling%20with%20bnlearn%20package&amp;url=innocenter-amima.rbind.io%2Fposts%2F2021-10-15-graph-r-packages%2F">
+      <a href="https://twitter.com/share?text=Latent%20Variable%20Modelling%20R-packages&amp;url=innocenter-amima.rbind.io%2Fprojects%2F2021-10-15-latent-variable-modelling-r-packages%2F">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=innocenter-amima.rbind.io%2Fposts%2F2021-10-15-graph-r-packages%2F&amp;title=Probabilistic%20Graphical%20Modelling%20with%20bnlearn%20package">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=innocenter-amima.rbind.io%2Fprojects%2F2021-10-15-latent-variable-modelling-r-packages%2F&amp;title=Latent%20Variable%20Modelling%20R-packages">
         <i class="fab fa-linkedin"></i>
       </a>
     </span>

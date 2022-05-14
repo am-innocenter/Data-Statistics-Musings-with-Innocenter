@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "path": "projects/2021-10-15-latent-variable-modelling-r-packages/",
+    "title": "Latent Variable Modelling R-packages",
+    "description": {},
+    "author": [],
+    "date": "2021-10-15",
+    "categories": [
+      "R packages",
+      "GLLVMs"
+    ],
+    "contents": "\nLatent Variable Modelling R-packages\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-05-14T13:01:37+12:00",
+    "input_file": "latent-variable-modelling-r-packages.knit.md"
+  }
+]

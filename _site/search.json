@@ -13,7 +13,7 @@
       "description": "Welcome to the website. I hope you will have fun and leaRn!\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-05-10T21:43:22+12:00"
+      "last_modified": "2022-05-14T13:03:25+12:00"
     },
     {
       "path": "projects.html",
@@ -21,7 +21,7 @@
       "description": "Learn packages and tools in R",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-05-10T18:58:45+12:00"
+      "last_modified": "2022-05-14T13:01:37+12:00"
     }
   ],
   "collections": ["posts/posts.json", "projects/projects.json"]

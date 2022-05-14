@@ -15,18 +15,18 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-I was getting errors knitting .Rmarkdown or .Rmd files and the culprint was that I had multiple .Rprofiles in my Home and project directories. The error is as shown below
+I was getting errors knitting .Rmarkdown or .Rmd files and the culprit was that I had multiple .Rprofiles in my Home and project directories. The error is as shown below
 
 
 ![](markdown_error.png)
 
-Everytime I restarted the machine it was loading the previous workspace with the following error. 
+Every time I restarted the machine it was loading the previous workspace with the following error. 
 
 ![](markdown_error2.png)
 
-At first I thought .RData was the culprint and I unliked it using unlink("~/.RData"). It still did not solve the problem.
+At first I thought .RData was the culprit and I unlinked it using unlink("~/.RData"). It still did not solve the problem.
 
-I had updated to the latest Rversion and my first instinct was update libraries, uninstall and reinstall R+Rstudio but still the error was there anytime I tried knitting. I tried most suggestions provided such as including self_contained: no and even installed tinytex : tinytex::install_tinytex(). 
+I had updated to the latest Rversion and my first instinct was update libraries, uninstall and reinstall R+Rstudio but still the error was there any time I tried knitting. I tried most suggestions provided such as including self_contained: no and even installed tinytex : tinytex::install_tinytex(). 
 
 
 ## Solution

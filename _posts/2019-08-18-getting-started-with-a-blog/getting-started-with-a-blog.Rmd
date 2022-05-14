@@ -120,7 +120,7 @@ Now you can add a readme.md note. You will be required to pull(fetch and merge) 
 
 ## 5. Continous deployment with Netlify
 
-Now worry not about having to upload the _public_ folder to  [Netlify](https://www.netlify.com) everytime. Connect the Github repository and let Netlify continously deploy your website anytime you update. 
+Now worry not about having to upload the _public_ folder to  [Netlify](https://www.netlify.com) everytime. Connect the Github repository and let Netlify continuously deploy your website any time you update. 
 
 Another route will be to skip Github but everytime you will have to upload the public folder to Netlify.
 
@@ -146,7 +146,7 @@ _And the bonus is!!!!_
 
 ## Adding comment section using Disquis
 
-You can include comments in your new webiste. Yay!! Follow the following reference [How to install disqus on hugo](https://notes.peter-baumgartner.net/tutorial/how-to-install-disqus-on-hugo/) that provides clear way to setup.
+You can include comments in your new website. Yay!! Follow the following reference [How to install disqus on hugo](https://notes.peter-baumgartner.net/tutorial/how-to-install-disqus-on-hugo/) that provides clear way to set-up.
 
 
 
@@ -184,4 +184,4 @@ Feel free to drop a comment or suggestion in the comment section.
 
 
 
-Update: I have moved my site from using blogdown to distil. Here is a great reference if planning to use [distil](https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/). 
+Update: I have moved my site from using blogdown to distil. Here is a great reference if planning to use [distil](https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/) and [here] (https://themockup.blog/posts/2020-08-01-building-a-blog-with-distill/). 

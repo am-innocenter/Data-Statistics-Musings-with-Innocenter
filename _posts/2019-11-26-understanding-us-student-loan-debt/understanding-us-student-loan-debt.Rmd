@@ -42,7 +42,7 @@ loans <- read.csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday
 glimpse(loans)
 ```
 
-Original data file can be accessed through the weekly TidyTuesday Github reporsitory in this [link](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-11-26/loans.csv) and data source is [here](https://studentaid.ed.gov/sa/about/data-center/student/default)
+Original data file can be accessed through the weekly TidyTuesday Github repository in this [link](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-11-26/loans.csv) and data source is [here](https://studentaid.ed.gov/sa/about/data-center/student/default)
 
 
 

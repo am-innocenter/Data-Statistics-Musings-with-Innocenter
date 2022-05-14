@@ -1,5 +1,22 @@
 [
   {
+    "path": "projects/2021-10-15-graph-r-packages/",
+    "title": "Application of Bayesian Networks to Viticulture",
+    "description": {},
+    "author": [],
+    "date": "2022-05-14",
+    "categories": [
+      "Bayesian networks",
+      "R packages"
+    ],
+    "contents": "\nProbabilistic Graphical Modelling\nAn analysis for R-Packages built for graphs\nDAGs are\n\n\n\n\n\n\n",
+    "preview": "projects/2021-10-15-graph-r-packages/graph-r-packages_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2022-05-14T14:00:32+12:00",
+    "input_file": "graph-r-packages.knit.md",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "projects/2021-10-15-latent-variable-modelling-r-packages/",
     "title": "Latent Variable Modelling R-packages",
     "description": {},

@@ -8,7 +8,6 @@ categories:
 # author:
 #   - name: am-innocenter
 date: "`r Sys.Date()`"
-draft: true
 output:
   distill::distill_article:
     self_contained: false

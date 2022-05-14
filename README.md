@@ -1,2 +1,2 @@
 # Introduction
-Hi! I blog about data and statistics in R using the distill package, deploy using Netlify and rbind.io.
+Hi! Welcome to my new blog where i write mosdtly about data and statistics in R. I use the distill package in R to write articles/blog and Netlify to deploy.
